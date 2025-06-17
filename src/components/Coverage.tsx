@@ -1,0 +1,106 @@
+
+import { MapPin } from "lucide-react";
+
+const Coverage = () => {
+  const neighborhoods = [
+    "Batel", "Água Verde", "Portão", "Champagnat", "Bigorrilho", "Cabral",
+    "Centro", "Rebouças", "Juvevê", "Ahú", "Alto da Glória", "Cristo Rei",
+    "Jardim Botânico", "Guabirotuba", "Fanny", "Lindoia", "Vila Izabel",
+    "Mercês", "São Francisco", "Fazendinha", "Capão Raso", "Xaxim"
+  ];
+
+  const cities = [
+    "Curitiba", "São José dos Pinhais", "Pinhais", "Colombo", 
+    "Almirante Tamandaré", "Campo Largo", "Araucária"
+  ];
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Área de Atendimento
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Atendemos Curitiba e região metropolitana com rapidez e qualidade
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Mapa Placeholder */}
+          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center min-h-[400px]">
+            <div className="text-center">
+              <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                Curitiba e Região Metropolitana
+              </h3>
+              <p className="text-gray-600">
+                Cobrimos toda a região de Curitiba com<br />
+                atendimento rápido e eficiente
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            {/* Principais Cidades */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                Cidades Atendidas
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {cities.map((city, index) => (
+                  <div key={index} className="flex items-center bg-blue-50 p-3 rounded-lg">
+                    <MapPin className="w-4 h-4 text-primary mr-2" />
+                    <span className="text-gray-700 font-medium">{city}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Principais Bairros de Curitiba */}
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                Principais Bairros de Curitiba
+              </h3>
+              <div className="grid grid-cols-2 gap-2">
+                {neighborhoods.map((neighborhood, index) => (
+                  <div key={index} className="flex items-center text-gray-600 py-1">
+                    <span className="w-2 h-2 bg-secondary rounded-full mr-3"></span>
+                    {neighborhood}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Informações de Atendimento */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-lg font-semibold text-gray-800 mb-4">
+                Informações de Atendimento
+              </h4>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Atendimento em toda região metropolitana
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Deslocamento sem taxa adicional na região
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Horário flexível, incluindo fins de semana
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-500 mr-2">✓</span>
+                  Resposta rápida via WhatsApp
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Coverage;
