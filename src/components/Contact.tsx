@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -119,7 +118,6 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-gray-800">Horário de Atendimento</h4>
                       <p className="text-gray-600">Segunda a Sexta: 7h às 18h</p>
-                      <p className="text-gray-600">Sábado: 8h às 16h</p>
                       <p className="text-sm text-gray-500">Domingo: Somente emergências</p>
                     </div>
                   </div>

@@ -93,7 +93,7 @@ const Testimonials = () => {
               Avaliação Geral dos Clientes
             </h3>
             <div className="flex items-center justify-center mb-4">
-              <div className="text-4xl font-bold text-primary mr-4">4.9</div>
+              <div className="text-4xl font-bold text-primary mr-4">5.0</div>
               <div>
                 <div className="flex items-center mb-2">
                   {renderStars(5)}
@@ -102,7 +102,7 @@ const Testimonials = () => {
               </div>
             </div>
             <p className="text-gray-600">
-              <strong>98% dos clientes</strong> recomendam nossos serviços para amigos e familiares
+              <strong>100% dos clientes</strong> recomendam nossos serviços para amigos e familiares
             </p>
           </div>
         </div>

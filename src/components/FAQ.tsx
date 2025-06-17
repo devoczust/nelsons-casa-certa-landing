@@ -14,19 +14,15 @@ const FAQ = () => {
     },
     {
       question: "Qual é o prazo para execução dos serviços?",
-      answer: "O prazo varia conforme o tipo e complexidade do serviço. Pequenos reparos geralmente são concluídos no mesmo dia. Serviços maiores como pintura podem levar de 1 a 3 dias. Sempre informamos o prazo no orçamento."
+      answer: "O prazo varia conforme o tipo e complexidade do serviço. Pequenos reparos geralmente são concluídos no mesmo dia. Serviços maiores como instalações elétricas podem levar de 1 a 3 dias. Sempre informamos o prazo no orçamento."
     },
     {
       question: "Os materiais estão inclusos no preço?",
-      answer: "Depende do serviço. Para pequenos reparos, geralmente incluímos materiais básicos. Para serviços maiores, fornecemos duas opções: com e sem material. Sempre usamos materiais de qualidade e damos garantia."
+      answer: "Depende do serviço. Para pequenos reparos, geralmente incluímos materiais básicos. Para serviços maiores, fornecemos duas opções: com e sem material. Sempre usamos materiais de qualidade."
     },
     {
       question: "Vocês atendem aos finais de semana?",
-      answer: "Sim! Atendemos também aos sábados e domingos, mediante agendamento prévio. Entendemos que muitas vezes é mais conveniente realizar os serviços nos fins de semana."
-    },
-    {
-      question: "Há garantia nos serviços executados?",
-      answer: "Sim, oferecemos garantia de 90 dias em todos os serviços executados. Se houver algum problema relacionado ao nosso trabalho, retornamos sem custo adicional para corrigi-lo."
+      answer: "Atendemos aos domingos somente para emergências, mediante agendamento prévio. Durante a semana nosso horário é de segunda a sexta-feira das 7h às 18h."
     },
     {
       question: "Como é calculado o valor dos serviços?",

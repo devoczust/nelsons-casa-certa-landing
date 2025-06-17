@@ -1,4 +1,3 @@
-
 import { MessageCircle, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -128,7 +127,6 @@ const Footer = () => {
               <h5 className="font-semibold mb-2">Horário de Atendimento</h5>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>Segunda a Sexta: 7h às 18h</p>
-                <p>Sábado: 8h às 16h</p>
                 <p>Domingo: Emergências</p>
               </div>
             </div>
