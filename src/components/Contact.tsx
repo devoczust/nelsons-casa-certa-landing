@@ -47,11 +47,11 @@ const Contact = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541999999999?text=Olá! Gostaria de solicitar um orçamento.', '_blank');
+    window.open('https://wa.me/5541988518580?text=Olá! Gostaria de solicitar um orçamento.', '_blank');
   };
 
   const handleCallClick = () => {
-    window.open('tel:+5541999999999', '_self');
+    window.open('tel:+5541988518580', '_self');
   };
 
   return (
@@ -88,7 +88,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">WhatsApp</h4>
-                      <p className="text-gray-600">(41) 99999-9999</p>
+                      <p className="text-gray-600">(41) 98851-8580</p>
                       <p className="text-sm text-gray-500">Resposta rápida garantida</p>
                     </div>
                   </div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Telefone</h4>
-                      <p className="text-gray-600">(41) 99999-9999</p>
+                      <p className="text-gray-600">(41) 98851-8580</p>
                       <p className="text-sm text-gray-500">Atendimento personalizado</p>
                     </div>
                   </div>
@@ -199,7 +199,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      placeholder="(41) 99999-9999"
+                      placeholder="(41) 98851-8580"
                     />
                   </div>
                 </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                     type="text"
                     value={formData.service}
                     onChange={handleInputChange}
-                    placeholder="Ex: Reparo elétrico, pintura, montagem..."
+                    placeholder="Ex: Reparo elétrico, montagem de móveis..."
                   />
                 </div>
 

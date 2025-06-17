@@ -16,11 +16,6 @@ const Services = () => {
       icon: "🔧"
     },
     {
-      title: "Pintura",
-      description: "Pintura de paredes, tetos, portões, grades, retoques e pequenas reformas de pintura residencial.",
-      icon: "🎨"
-    },
-    {
       title: "Montagem de Móveis",
       description: "Montagem de móveis planejados, estantes, guarda-roupas, mesas, cadeiras e todos os tipos de móveis.",
       icon: "🛠️"
@@ -34,12 +29,17 @@ const Services = () => {
       title: "Pequenos Reparos",
       description: "Conserto de fechaduras, dobradiças, ajustes em portas e janelas, troca de ferragens em geral.",
       icon: "🔨"
+    },
+    {
+      title: "Manutenção Geral",
+      description: "Serviços diversos de manutenção residencial, instalações e pequenos consertos em geral.",
+      icon: "🏠"
     }
   ];
 
   const handleWhatsAppClick = (service: string) => {
     const message = `Olá! Gostaria de solicitar um orçamento para ${service}.`;
-    window.open(`https://wa.me/5541999999999?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/5541988518580?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (

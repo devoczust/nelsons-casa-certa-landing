@@ -3,10 +3,11 @@ import { MapPin } from "lucide-react";
 
 const Coverage = () => {
   const neighborhoods = [
-    "Batel", "Água Verde", "Portão", "Champagnat", "Bigorrilho", "Cabral",
-    "Centro", "Rebouças", "Juvevê", "Ahú", "Alto da Glória", "Cristo Rei",
-    "Jardim Botânico", "Guabirotuba", "Fanny", "Lindoia", "Vila Izabel",
-    "Mercês", "São Francisco", "Fazendinha", "Capão Raso", "Xaxim"
+    "Xaxim", "Capão Raso", "Fazendinha", "Sítio Cercado", "Boqueirão",
+    "Hauer", "Cidade Industrial", "Umbará", "Novo Mundo", "Santa Felicidade",
+    "Orleans", "Tatuquara", "Campo de Santana", "São Braz", "Lindoia",
+    "Vila Izabel", "Guabirotuba", "Parolin", "Prado Velho", "Vila Hauer",
+    "Rebouças", "Portão"
   ];
 
   const cities = [

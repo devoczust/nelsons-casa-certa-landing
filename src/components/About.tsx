@@ -26,7 +26,7 @@ const About = () => {
                   Experiência e Confiança
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  Com mais de <strong>10 anos de experiência</strong> em serviços de manutenção 
+                  Com mais de <strong>35 anos de experiência</strong> em serviços de manutenção 
                   residencial, Nelson Oczust é referência em <strong>pequenas reformas</strong> e 
                   serviços de <strong>marido de aluguel</strong> em Curitiba e região metropolitana.
                 </p>

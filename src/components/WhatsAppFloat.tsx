@@ -15,7 +15,7 @@ const WhatsAppFloat = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541999999999?text=Olá! Vim pelo site e gostaria de solicitar um orçamento.', '_blank');
+    window.open('https://wa.me/5541988518580?text=Olá! Vim pelo site e gostaria de solicitar um orçamento.', '_blank');
   };
 
   if (!isVisible) return null;

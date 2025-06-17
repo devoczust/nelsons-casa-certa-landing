@@ -5,11 +5,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541999999999?text=Olá! Gostaria de mais informações sobre os serviços.', '_blank');
+    window.open('https://wa.me/5541988518580?text=Olá! Gostaria de mais informações sobre os serviços.', '_blank');
   };
 
   const handleCallClick = () => {
-    window.open('tel:+5541999999999', '_self');
+    window.open('tel:+5541988518580', '_self');
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -35,7 +35,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Mais de 10 anos oferecendo serviços de qualidade em pequenas reformas 
+              Mais de 35 anos oferecendo serviços de qualidade em pequenas reformas 
               e manutenção residencial em Curitiba e região.
             </p>
             <div className="flex space-x-4">
@@ -60,10 +60,10 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li>Elétrica Residencial</li>
               <li>Hidráulica</li>
-              <li>Pintura</li>
               <li>Montagem de Móveis</li>
               <li>Instalação de Suportes</li>
               <li>Pequenos Reparos</li>
+              <li>Manutenção Geral</li>
             </ul>
           </div>
 
@@ -112,7 +112,7 @@ const Footer = () => {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>(41) 99999-9999</span>
+                <span>(41) 98851-8580</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4" />
