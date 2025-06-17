@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { WhatsApp, Phone, Clock, MapPin } from "lucide-react";
+import { MessageCircle, Phone, Clock, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -84,7 +84,7 @@ const Contact = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
                     <div className="bg-secondary/10 p-3 rounded-full">
-                      <WhatsApp className="w-6 h-6 text-secondary" />
+                      <MessageCircle className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">WhatsApp</h4>
@@ -148,7 +148,7 @@ const Contact = () => {
                 className="bg-secondary hover:bg-secondary/90 flex-1"
                 size="lg"
               >
-                <WhatsApp className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2" />
                 Chamar no WhatsApp
               </Button>
               <Button 

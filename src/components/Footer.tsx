@@ -1,5 +1,5 @@
 
-import { WhatsApp, Phone, MapPin } from "lucide-react";
+import { MessageCircle, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -43,7 +43,7 @@ const Footer = () => {
                 onClick={handleWhatsAppClick}
                 className="bg-secondary hover:bg-secondary/90 p-2 rounded-full transition-colors"
               >
-                <WhatsApp className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </button>
               <button 
                 onClick={handleCallClick}
@@ -115,7 +115,7 @@ const Footer = () => {
                 <span>(41) 99999-9999</span>
               </div>
               <div className="flex items-center space-x-2">
-                <WhatsApp className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp</span>
               </div>
               <div className="flex items-start space-x-2">

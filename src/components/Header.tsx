@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, WhatsApp } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -63,7 +63,7 @@ const Header = () => {
           {/* Desktop WhatsApp Button */}
           <div className="hidden md:block">
             <Button onClick={handleWhatsAppClick} className="bg-secondary hover:bg-secondary/90">
-              <WhatsApp className="w-4 h-4 mr-2" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               WhatsApp
             </Button>
           </div>
@@ -110,7 +110,7 @@ const Header = () => {
                 Contato
               </button>
               <Button onClick={handleWhatsAppClick} className="bg-secondary hover:bg-secondary/90 mt-4">
-                <WhatsApp className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-4 h-4 mr-2" />
                 WhatsApp
               </Button>
             </nav>

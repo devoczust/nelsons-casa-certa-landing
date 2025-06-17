@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { WhatsApp, Phone } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
 
 const Hero = () => {
   const handleWhatsAppClick = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
               size="lg"
               className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-4 animate-pulse"
             >
-              <WhatsApp className="w-6 h-6 mr-3" />
+              <MessageCircle className="w-6 h-6 mr-3" />
               Orçamento Grátis via WhatsApp
             </Button>
             <Button 
