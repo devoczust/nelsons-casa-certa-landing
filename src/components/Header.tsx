@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5541999999999?text=Olá! Gostaria de saber mais sobre os serviços de reforma e manutenção.', '_blank');
+    window.open('https://wa.me/5541988518580?text=Olá! Gostaria de saber mais sobre os serviços de reforma e manutenção.', '_blank');
   };
 
   return (
