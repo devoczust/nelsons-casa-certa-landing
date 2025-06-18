@@ -1,6 +1,8 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import Logo from "./Logo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,15 +28,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">N</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-gray-800">Nelson Oczust</h1>
-              <p className="text-sm text-gray-600">Marido de Aluguel</p>
-            </div>
-          </div>
+          <Logo size="md" showText={true} />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">

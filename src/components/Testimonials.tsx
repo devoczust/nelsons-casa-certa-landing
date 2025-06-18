@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 
 const Testimonials = () => {
@@ -17,11 +18,11 @@ const Testimonials = () => {
       service: "Reparo Hidráulico"
     },
     {
-      name: "Ana Carolina",
+      name: "Mariana Costa",
       location: "Portão, Curitiba",
       rating: 5,
-      comment: "Pintou meu apartamento em 2 dias. Trabalho limpo e organizado. Ficou perfeito! Já indiquei para várias amigas.",
-      service: "Pintura Residencial"
+      comment: "Instalou várias tomadas e interruptores na casa nova. Trabalho muito bem feito e com garantia. Excelente profissional!",
+      service: "Instalação Elétrica"
     },
     {
       name: "Roberto Lima",

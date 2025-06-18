@@ -1,4 +1,6 @@
+
 import { MessageCircle, Phone, MapPin } from "lucide-react";
+import Logo from "./Logo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,14 +26,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Informações da Empresa */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">N</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Nelson Oczust</h3>
-                <p className="text-gray-300 text-sm">Marido de Aluguel</p>
-              </div>
+            <div className="mb-4">
+              <Logo size="md" showText={true} />
             </div>
             <p className="text-gray-300 mb-4">
               Mais de 35 anos oferecendo serviços de qualidade em pequenas reformas 

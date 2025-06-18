@@ -28,17 +28,24 @@ const Coverage = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Mapa Placeholder */}
-          <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center min-h-[400px]">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                Curitiba e Região Metropolitana
-              </h3>
-              <p className="text-gray-600">
-                Cobrimos toda a região de Curitiba com<br />
-                atendimento rápido e eficiente
-              </p>
+          {/* Mapa de Curitiba */}
+          <div className="bg-gray-100 rounded-lg overflow-hidden min-h-[400px] relative">
+            <img 
+              src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&h=600" 
+              alt="Vista aérea de Curitiba e região metropolitana"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+              <div className="text-center text-white">
+                <MapPin className="w-16 h-16 mx-auto mb-4" />
+                <h3 className="text-2xl font-semibold mb-2">
+                  Curitiba e Região Metropolitana
+                </h3>
+                <p className="text-lg">
+                  Cobrimos toda a região de Curitiba com<br />
+                  atendimento rápido e eficiente
+                </p>
+              </div>
             </div>
           </div>
 
