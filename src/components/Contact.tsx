@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MessageCircle, Phone, Clock, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +16,7 @@ const Contact = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,25 +27,69 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Simular envio do formulário
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve. Obrigado!",
-    });
+    try {
+      // Salvar dados no Supabase
+      const { error: dbError } = await supabase
+        .from('contact_requests')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            service: formData.service,
+            message: formData.message
+          }
+        ]);
 
-    // Limpar formulário
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    });
+      if (dbError) {
+        console.error('Erro ao salvar no banco:', dbError);
+        throw new Error('Erro ao salvar dados');
+      }
+
+      // Enviar emails via Edge Function
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message
+        }
+      });
+
+      if (emailError) {
+        console.error('Erro ao enviar email:', emailError);
+        // Não vamos falhar se o email não for enviado
+      }
+
+      toast({
+        title: "Mensagem enviada com sucesso!",
+        description: "Recebemos sua solicitação e entraremos em contato em breve. Obrigado!",
+      });
+
+      // Limpar formulário
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      toast({
+        title: "Erro ao enviar mensagem",
+        description: "Houve um problema ao enviar sua solicitação. Tente novamente ou entre em contato pelo WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleWhatsAppClick = () => {
@@ -184,6 +231,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="Seu nome completo"
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -198,6 +246,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       required
                       placeholder="(41) 98851-8580"
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -213,6 +262,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="seu@email.com"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -227,6 +277,7 @@ const Contact = () => {
                     value={formData.service}
                     onChange={handleInputChange}
                     placeholder="Ex: Reparo elétrico, montagem de móveis..."
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -242,11 +293,17 @@ const Contact = () => {
                     required
                     placeholder="Descreva detalhadamente o serviço que precisa..."
                     rows={4}
+                    disabled={isSubmitting}
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
-                  Enviar Solicitação
+                <Button 
+                  type="submit" 
+                  className="w-full bg-primary hover:bg-primary/90" 
+                  size="lg"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Enviando..." : "Enviar Solicitação"}
                 </Button>
 
                 <p className="text-sm text-gray-500 text-center">
