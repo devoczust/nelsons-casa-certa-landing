@@ -1,14 +1,13 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maria Silva",
+      name: "Carlos Roberto",
       location: "Batel, Curitiba",
       rating: 5,
-      comment: "Excelente profissional! Nelson fez a instalação elétrica da minha cozinha com muita competência. Recomendo!",
-      service: "Instalação Elétrica"
+      comment: "Montou toda a mobília do meu quarto em meio período. Trabalho impecável e muito organizado. Super recomendo!",
+      service: "Montagem de Móveis"
     },
     {
       name: "João Santos",
