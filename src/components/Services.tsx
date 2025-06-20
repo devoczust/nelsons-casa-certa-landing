@@ -49,16 +49,16 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-construction-50 via-amber-50 to-orange-50 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-construction-50 via-amber-50 to-earth-50 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-construction-pattern" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-construction-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-construction-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-earth-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-wood-900 mb-6">
-            Nossos <span className="bg-gradient-to-r from-construction-600 to-amber-600 bg-clip-text text-transparent">Serviços</span>
+            Nossos <span className="bg-gradient-to-r from-construction-600 to-earth-600 bg-clip-text text-transparent">Serviços</span>
           </h2>
           <p className="text-xl text-wood-600 max-w-3xl mx-auto leading-relaxed font-light">
             Oferecemos uma ampla gama de serviços para sua casa ou apartamento, 
@@ -91,7 +91,7 @@ const Services = () => {
                 </CardDescription>
                 <Button 
                   onClick={() => handleWhatsAppClick(service.title)}
-                  className="w-full bg-gradient-to-r from-secondary to-green-700 hover:from-green-700 hover:to-secondary transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-secondary to-teal-700 hover:from-teal-700 hover:to-secondary transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Solicitar Orçamento

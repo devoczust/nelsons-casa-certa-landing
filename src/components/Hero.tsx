@@ -12,13 +12,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 overflow-hidden">
+    <section className="relative pt-32 pb-20 bg-gradient-to-br from-construction-50 via-amber-50 to-earth-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-construction-pattern" />
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob" />
-        <div className="absolute top-40 right-20 w-72 h-72 bg-amber-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-2000" />
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-construction-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
+        <div className="absolute top-40 right-20 w-72 h-72 bg-earth-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-amber-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
       </div>
 
       {/* Floating construction tools */}
@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-extrabold text-wood-900 mb-8 leading-tight">
               <span className="block">Seu</span>
-              <span className="bg-gradient-to-r from-construction-600 via-construction-700 to-amber-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-construction-600 via-construction-700 to-earth-600 bg-clip-text text-transparent">
                 Marido de Aluguel
               </span>
               <span className="block text-4xl md:text-5xl font-bold text-wood-700">em Curitiba</span>
@@ -71,7 +71,7 @@ const Hero = () => {
               <Button 
                 onClick={handleWhatsAppClick}
                 size="lg"
-                className="bg-gradient-to-r from-secondary to-green-700 hover:from-green-700 hover:to-secondary text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 font-semibold"
+                className="bg-gradient-to-r from-secondary to-teal-700 hover:from-teal-700 hover:to-secondary text-white text-lg px-10 py-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 font-semibold"
               >
                 <MessageCircle className="w-6 h-6 mr-3" />
                 Solicitar Orçamento Grátis
@@ -109,7 +109,7 @@ const Hero = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-slide-up animation-delay-4000">
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-construction-100 hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform">
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-amber-600 bg-clip-text text-transparent mb-3">
+                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-earth-600 bg-clip-text text-transparent mb-3">
                   500+
                 </div>
                 <div className="text-wood-600 font-medium">Serviços Realizados</div>
@@ -117,7 +117,7 @@ const Hero = () => {
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-construction-100 hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform">
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-amber-600 bg-clip-text text-transparent mb-3">
+                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-earth-600 bg-clip-text text-transparent mb-3">
                   35+
                 </div>
                 <div className="text-wood-600 font-medium">Anos de Experiência</div>
@@ -125,7 +125,7 @@ const Hero = () => {
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-construction-100 hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform">
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-amber-600 bg-clip-text text-transparent mb-3">
+                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-earth-600 bg-clip-text text-transparent mb-3">
                   100%
                 </div>
                 <div className="text-wood-600 font-medium">Clientes Satisfeitos</div>
@@ -133,7 +133,7 @@ const Hero = () => {
             </div>
             <div className="bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-construction-100 hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform">
               <div className="text-center">
-                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-amber-600 bg-clip-text text-transparent mb-3">
+                <div className="text-4xl font-bold bg-gradient-to-r from-construction-600 to-earth-600 bg-clip-text text-transparent mb-3">
                   24h
                 </div>
                 <div className="text-wood-600 font-medium">Resposta Rápida</div>

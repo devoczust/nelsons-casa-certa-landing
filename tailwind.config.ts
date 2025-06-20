@@ -29,15 +29,15 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#D97706', // Orange 600 (cor de ferramentas/construção)
+					DEFAULT: '#D97706', // Orange 600 - cor principal para ferramentas
 					foreground: '#ffffff'
 				},
 				secondary: {
-					DEFAULT: '#16A34A', // Green 600 (cor natural/sustentável)
+					DEFAULT: '#0F766E', // Teal 700 - cor secundária mais suave
 					foreground: '#ffffff'
 				},
 				accent: {
-					DEFAULT: '#FEF3C7', // Amber 100 (tom suave)
+					DEFAULT: '#FEF3C7', // Amber 100 - tom suave
 					foreground: '#92400E' // Amber 800
 				},
 				construction: {
@@ -63,6 +63,18 @@ export default {
 					700: '#44403C',
 					800: '#292524',
 					900: '#1C1917',
+				},
+				earth: {
+					50: '#F7F3F0',
+					100: '#EDE6E0',
+					200: '#DBCDC1',
+					300: '#C9B4A2',
+					400: '#B69B83',
+					500: '#A48264',
+					600: '#8B6F56',
+					700: '#6D5542',
+					800: '#4F3C2E',
+					900: '#31231A',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
