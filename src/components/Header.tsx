@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50 border-b border-construction-100">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Logo size="md" showText={true} />
@@ -34,25 +34,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-wood-700 hover:text-construction-600 transition-colors font-medium"
             >
               Serviços
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-wood-700 hover:text-construction-600 transition-colors font-medium"
             >
               Sobre
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-wood-700 hover:text-construction-600 transition-colors font-medium"
             >
               Depoimentos
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-primary transition-colors"
+              className="text-wood-700 hover:text-construction-600 transition-colors font-medium"
             >
               Contato
             </button>
@@ -72,38 +72,38 @@ const Header = () => {
             className="md:hidden p-2"
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-gray-800 transition-all ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-gray-800 mt-1 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-5 h-0.5 bg-gray-800 mt-1 transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              <span className={`block w-5 h-0.5 bg-wood-800 transition-all ${isMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+              <span className={`block w-5 h-0.5 bg-wood-800 mt-1 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-5 h-0.5 bg-wood-800 mt-1 transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
             </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="md:hidden mt-4 pb-4 border-t border-construction-200">
             <nav className="flex flex-col space-y-3 pt-4">
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-primary transition-colors py-2"
+                className="text-left text-wood-700 hover:text-construction-600 transition-colors py-2 font-medium"
               >
                 Serviços
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-left text-gray-700 hover:text-primary transition-colors py-2"
+                className="text-left text-wood-700 hover:text-construction-600 transition-colors py-2 font-medium"
               >
                 Sobre
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
-                className="text-left text-gray-700 hover:text-primary transition-colors py-2"
+                className="text-left text-wood-700 hover:text-construction-600 transition-colors py-2 font-medium"
               >
                 Depoimentos
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-primary transition-colors py-2"
+                className="text-left text-wood-700 hover:text-construction-600 transition-colors py-2 font-medium"
               >
                 Contato
               </button>
