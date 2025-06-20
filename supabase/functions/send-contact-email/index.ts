@@ -27,9 +27,9 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { name, email, phone, service, message }: ContactEmailRequest = await req.json();
 
-    // Enviar email para gabriel.oczust@gmail.com
+    // Enviar email para gabriel.oczust@gmail.com usando o email de teste permitido
     const emailResponse = await resend.emails.send({
-      from: "Marido de Aluguel Curitiba <onboarding@resend.dev>",
+      from: "Marido de Aluguel Curitiba <devoczust@gmail.com>",
       to: ["gabriel.oczust@gmail.com"],
       subject: `Nova Solicitação de Orçamento - ${name}`,
       html: `
@@ -51,24 +51,27 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    // Enviar email de confirmação para o cliente
-    await resend.emails.send({
-      from: "Marido de Aluguel Curitiba <onboarding@resend.dev>",
-      to: [email],
-      subject: "Solicitação Recebida - Marido de Aluguel Curitiba",
-      html: `
-        <h2>Obrigado pelo seu contato, ${name}!</h2>
-        <p>Recebemos sua solicitação de orçamento e entraremos em contato em breve.</p>
-        <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
-          <h3>Resumo da sua solicitação:</h3>
-          <p><strong>Tipo de Serviço:</strong> ${service || 'Não especificado'}</p>
-          <p><strong>Descrição:</strong> ${message}</p>
-        </div>
-        <p>Nossa equipe analisará sua solicitação e retornará o contato rapidamente, geralmente em até 2 horas durante nosso horário de atendimento.</p>
-        <p><strong>Horário de Atendimento:</strong> Segunda a Sexta das 7h às 18h</p>
-        <p>Atenciosamente,<br>Equipe Marido de Aluguel Curitiba</p>
-      `,
-    });
+    // Enviar email de confirmação para o cliente usando o email de teste permitido
+    // (apenas para teste - em produção você deve verificar um domínio)
+    if (email === "devoczust@gmail.com") {
+      await resend.emails.send({
+        from: "Marido de Aluguel Curitiba <devoczust@gmail.com>",
+        to: [email],
+        subject: "Solicitação Recebida - Marido de Aluguel Curitiba",
+        html: `
+          <h2>Obrigado pelo seu contato, ${name}!</h2>
+          <p>Recebemos sua solicitação de orçamento e entraremos em contato em breve.</p>
+          <div style="background-color: #f0f8ff; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <h3>Resumo da sua solicitação:</h3>
+            <p><strong>Tipo de Serviço:</strong> ${service || 'Não especificado'}</p>
+            <p><strong>Descrição:</strong> ${message}</p>
+          </div>
+          <p>Nossa equipe analisará sua solicitação e retornará o contato rapidamente, geralmente em até 2 horas durante nosso horário de atendimento.</p>
+          <p><strong>Horário de Atendimento:</strong> Segunda a Sexta das 7h às 18h</p>
+          <p>Atenciosamente,<br>Equipe Marido de Aluguel Curitiba</p>
+        `,
+      });
+    }
 
     console.log("Emails enviados com sucesso:", emailResponse);
 

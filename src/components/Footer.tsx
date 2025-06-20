@@ -27,7 +27,20 @@ const Footer = () => {
           {/* Informações da Empresa */}
           <div>
             <div className="mb-4">
-              <Logo size="md" showText={true} />
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center relative shadow-lg">
+                  <div className="w-5 h-5 bg-white rounded-sm absolute"></div>
+                  <div className="w-3 h-3 bg-gray-800 absolute bottom-1 right-1 rounded-sm"></div>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-white leading-tight">
+                    Nelson Oczust
+                  </h1>
+                  <p className="text-sm text-gray-300">
+                    Marido de Aluguel
+                  </p>
+                </div>
+              </div>
             </div>
             <p className="text-gray-300 mb-4">
               Mais de 35 anos oferecendo serviços de qualidade em pequenas reformas 

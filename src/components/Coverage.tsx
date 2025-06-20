@@ -35,7 +35,7 @@ const Coverage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Mapa de Curitiba */}
           <div className="relative group">
-            <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1600298881974-6be191ceeda1?auto=format&fit=crop&w=800&h=600" 
                 alt="Vista aérea de Curitiba e região metropolitana"
