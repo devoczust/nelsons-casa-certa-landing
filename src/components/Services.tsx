@@ -8,32 +8,38 @@ const Services = () => {
     {
       title: "Elétrica Residencial",
       description: "Instalação e reparo de tomadas, interruptores, chuveiros elétricos, luminárias e pequenos reparos elétricos.",
-      icon: "⚡"
+      icon: "⚡",
+      bgImage: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&h=600"
     },
     {
       title: "Hidráulica",
       description: "Reparo de vazamentos, troca de torneiras, instalação de válvulas, desentupimento e pequenos reparos hidráulicos.",
-      icon: "🔧"
+      icon: "🔧",
+      bgImage: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&h=600"
     },
     {
       title: "Montagem de Móveis",
       description: "Montagem de móveis planejados, estantes, guarda-roupas, mesas, cadeiras e todos os tipos de móveis.",
-      icon: "🛠️"
+      icon: "🛠️",
+      bgImage: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&h=600"
     },
     {
       title: "Instalação de Suportes",
       description: "Fixação de TVs na parede, suportes, prateleiras, quadros, espelhos e outros itens de decoração.",
-      icon: "📺"
+      icon: "📺",
+      bgImage: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&h=600"
     },
     {
       title: "Pequenos Reparos",
       description: "Conserto de fechaduras, dobradiças, ajustes em portas e janelas, troca de ferragens em geral.",
-      icon: "🔨"
+      icon: "🔨",
+      bgImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&h=600"
     },
     {
       title: "Manutenção Geral",
       description: "Serviços diversos de manutenção residencial, instalações e pequenos consertos em geral.",
-      icon: "🏠"
+      icon: "🏠",
+      bgImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=600"
     }
   ];
 
@@ -43,32 +49,49 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Nossos Serviços
+    <section id="services" className="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-green-50 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Nossos <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Serviços</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
             Oferecemos uma ampla gama de serviços para sua casa ou apartamento, 
-            sempre com qualidade e preço justo.
+            sempre com qualidade profissional e preço justo.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-0 shadow-md">
-              <CardHeader className="text-center">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <CardTitle className="text-xl text-gray-800">{service.title}</CardTitle>
+            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-0 shadow-lg bg-white/90 backdrop-blur-sm hover:scale-105 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={service.bgImage} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="text-4xl mb-2 filter drop-shadow-lg">{service.icon}</div>
+                </div>
+              </div>
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl text-gray-800 group-hover:text-primary transition-colors">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-4 text-center">
+              <CardContent className="pt-0">
+                <CardDescription className="text-gray-600 mb-6 text-sm leading-relaxed">
                   {service.description}
                 </CardDescription>
                 <Button 
                   onClick={() => handleWhatsAppClick(service.title)}
-                  className="w-full bg-secondary hover:bg-secondary/90"
+                  className="w-full bg-gradient-to-r from-secondary to-green-700 hover:from-green-700 hover:to-secondary transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
                   Solicitar Orçamento
@@ -79,18 +102,18 @@ const Services = () => {
         </div>
 
         <div className="text-center">
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+          <div className="bg-white/80 backdrop-blur-sm p-10 rounded-2xl shadow-xl max-w-3xl mx-auto border border-white/50">
+            <h3 className="text-3xl font-bold text-gray-800 mb-6">
               Precisa de Outro Serviço?
             </h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
               Não encontrou o que procura? Entre em contato! Realizamos diversos outros 
               tipos de pequenos reparos e manutenções residenciais.
             </p>
             <Button 
               onClick={() => handleWhatsAppClick("outros serviços")}
               size="lg"
-              className="bg-primary hover:bg-primary/90"
+              className="bg-gradient-to-r from-primary to-blue-700 hover:from-blue-700 hover:to-primary text-lg px-10 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Consultar Outros Serviços
